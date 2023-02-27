@@ -1,0 +1,170 @@
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hold Backoffice</title>
+  <script src="../../js/backoffice/holdBackoffice.js" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
+  <link rel="stylesheet" href="../css/mock1.css">
+
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-brown bg-brown">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse">
+        <img class="logoImges" src="../img/bygst_logo_pos_rgb_300dpi.jpg" alt="Logo">
+        <ul class="navbar-nav mb-auto mx-auto">
+          <li class="nav-item px-sm-3">
+            <a class="nav-link" href="index.html">Forside</a>
+          </li>
+          <li class="nav-item px-sm-3">
+            <a class="nav-link" href="omOs.html">Om os</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!--Sidenavigationsbar-->
+
+<!--hold tabel-->
+
+
+
+<section>
+  <div id="hold-container">
+
+    <select id="dropdownFML" class="btn-default" onchange="updateItemValue()" onchange="toggleInputFields()">
+      <option value="value">Option1</option>
+      <option value="value">Option2</option>
+      <option value="value">Option3</option>
+      <option value="value">Option4</option>
+
+    </select>
+    <select id="dropdownDelLok" class="btn-default" onchange="updateItemValue()" onchange="toggleInputFields()">
+      <option value="value">Option1</option>
+      <option value="value">Option2</option>
+      <option value="value">Option3</option>
+      <option value="value">Option4</option>
+
+    </select>
+
+    <form id="newFormular" action="" method="POST" style="display: grid; grid-template-columns: 10% 10%; grid-gap: 30px">
+
+      <label id="item-value1">Renhold</label>
+      <div class="input-container">
+
+          <input type="text" name="item1" onblur="validateInput(this)">
+          <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value2">Kantine</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value3">Intern Service</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value4">Udearealer</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value5">Indvendig Vedligehold</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value6">Affaldshåndtering</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+      <label id="item-value7">Vagt og Sikkerhed</label>
+      <div class="input-container">
+
+        <input type="text" name="item1" onblur="validateInput(this)">
+        <input type="text" name="item2" onblur="validateInput(this)">
+
+        <div class="text-content">
+          <span>data</span>
+        </div>
+      </div>
+
+
+
+      <button type="submit" form="modalForm" class="btn-default Indsend" title="save" id="submitindmelder">Indsend</button>
+    </form>
+
+
+  </div>
+</section>
+
+
+<!--Modal-->
+<div id="overlay">
+  <div class="modal-content" style="max-width: 600px; margin: 5% auto auto;">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+    </div>
+    <form class="modal-input-field" id="modalForm" enctype="multipart/form-data" style="max-height: 400px;  margin: 5%;  overflow: auto;">
+
+    </form>
+
+    <div class="modal-footer">
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

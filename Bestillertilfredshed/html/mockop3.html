@@ -1,0 +1,75 @@
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hold Backoffice</title>
+    <script src="../../js/backoffice/holdBackoffice.js" defer></script>
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
+    <link rel="stylesheet" href="../css/mock3.css.css">
+
+
+</head>
+<body>
+
+<!--Sidenavigationsbar-->
+<div class="sidebar-wrapper">
+    <div class="sidebar">
+        <h4>Backoffice</h4>
+        <ul>
+            <li><a href="opretFML.html">Opret FML</a></li>
+            <li><a href="opretDellokaalitet.html">Opret Dellokalitet</a></li>
+            <li><a href="hentData.html">Hent Data</a></li>
+            <li><a href="login.html">Log ud</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="nav-ul">
+            <!-- <li class="nav-li"><a onclick="createInfoboks()" class="nav-login, center" style="float: left">Opret infoboks</a></li>-->
+            <button type="submit" form="modalForm" id="submit" class="btn btn-default save" data-dismiss="modal">Gem</button>
+            <button class="btn btn-default"><a href="../galleri.html">Gå til Indmeldinger</a></button>
+            <!--  <li class="nav-li"><a href="login.html" class="nav-login, mainBtn">Sign out</a></li>-->
+        </div>
+    </div>
+</div>
+
+<!--hold tabel-->
+
+<p>hej</p>
+
+<section>
+    <div id="hold-container">
+
+        <select id="dropdownFML" class="btn-default" onchange="updateItemValue()" onchange="toggleInputFields()">
+            <option value="value">Option1</option>
+            <option value="value">Option2</option>
+            <option value="value">Option3</option>
+            <option value="value">Option4</option>
+
+        </select>
+        <label id="delLok" class="" a onchange="updateItemValue()" onchange="toggleInputFields()">
+
+
+        </label>
+
+
+<!--Modal-->
+<div id="overlay">
+    <div class="modal-content" style="max-width: 600px; margin: 5% auto auto;">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">gsgdgag</h4>
+        </div>
+        <form class="modal-input-field" id="modalForm" enctype="multipart/form-data" style="max-height: 400px;  margin: 5%;  overflow: auto;">
+
+        </form>
+
+        <div class="modal-footer">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
