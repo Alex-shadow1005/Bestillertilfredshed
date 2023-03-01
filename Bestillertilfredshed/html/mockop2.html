@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Hold Backoffice</title>
-    <script src="../../js/backoffice/holdBackoffice.js" defer></script>
+    <script src="../js/getLabels.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
-    <link rel="stylesheet" href="../css/mock1.css">
+    <link rel="stylesheet" href="../css/mock2.css">
 
 
 </head>
@@ -34,21 +34,32 @@
 
             <div class="title-container" >
 
-                <title>hej</title>
-                <p>hej</p>
-                <p>hej</p>
-
 
 
             </div>
         </form>
+        <script>
+            let inputs = [];
+            for (let i = 1; i <= 7; i++) {
+                let span = document.createElement("span");
+                span.textContent = "Indvendigt Vedligehold";
+                inputs.push(span);
+            }
+            inputs.forEach(span => {
+                document.querySelector('.title-container').appendChild(span);
+            });
+        </script>
+
+
 
         <form id="newFormular" action="" method="POST"
               style="display: grid; grid-template-columns: 10% 80%; grid-gap: 30px">
 
+
             <label id="item-value1">DelLok</label>
 
-                <div class="input-container">
+            <div class="input-container">
+
 
 
                     <input type="text" name="item1" onblur="validateInput(this)">
@@ -80,10 +91,8 @@
 
                     <input type="text" name="item14" onblur="validateInput(this)">
 
-                    <div class="text-content">
-                        <span>data</span>
-                    </div>
-                </div>
+
+            </div>
 
 
             <label id="item-value2">DelLok</label>
@@ -103,9 +112,7 @@
                 <input type="text" name="item12" onblur="validateInput(this)">
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
             <label id="item-value3">DelLok</label>
@@ -126,9 +133,7 @@
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
 
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
             <label id="item-value4">DelLok</label>
@@ -149,9 +154,7 @@
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
 
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
             <label id="item-value5">DelLok</label>
@@ -172,9 +175,7 @@
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
 
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
             <label id="item-value6">DelLok</label>
@@ -195,9 +196,7 @@
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
 
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
 
@@ -219,9 +218,7 @@
                 <input type="text" name="item13" onblur="validateInput(this)">
                 <input type="text" name="item14" onblur="validateInput(this)">
 
-                <div class="text-content">
-                    <span>data</span>
-                </div>
+
             </div>
 
             <button type="submit" form="modalForm" class="btn-default Indsend" title="save" id="submitindmelder">

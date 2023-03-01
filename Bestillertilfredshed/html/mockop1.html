@@ -40,20 +40,46 @@
 <section>
   <div id="hold-container">
 
-    <select id="dropdownFML" class="btn-default" onchange="updateItemValue()" onchange="toggleInputFields()">
-      <option value="value">Option1</option>
-      <option value="value">Option2</option>
-      <option value="value">Option3</option>
-      <option value="value">Option4</option>
+    <select id="dropdownFML" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
+      <option value="Option1">Option1</option>
+      <option value="Option2">Option2</option>
+      <option value="Option3">Option3</option>
+      <option value="Option4">Option4</option>
 
     </select>
-    <select id="dropdownDelLok" class="btn-default" onchange="updateItemValue()" onchange="toggleInputFields()">
-      <option value="value">Option1</option>
-      <option value="value">Option2</option>
-      <option value="value">Option3</option>
-      <option value="value">Option4</option>
+    <select id="dropdownDelLok" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
+      <option value="Option1">Option1</option>
+      <option value="Option2">Option2</option>
+      <option value="Option3">Option3</option>
+      <option value="Option4">Option4</option>
 
     </select>
+
+    <script>
+      // fetch options from the database
+      fetch('/getOptions')
+              .then(response => response.json())
+              .then(options => {
+                // populate the dropdown with options
+                const dropdown = document.getElementById('dropdownDelLok');
+                options.forEach(option => {
+                  const optionElement = document.createElement('option');
+                  optionElement.value = option.name;
+                  optionElement.text = option.name;
+                  dropdown.appendChild(optionElement);
+                });
+              })
+              .catch(error => console.error(error));
+
+
+      function selectNextOption() {
+        var dropdown = document.getElementById("dropdownDelLok");
+        var nextIndex = dropdown.selectedIndex + 1;
+        if (nextIndex < dropdown.options.length) {
+          dropdown.selectedIndex = nextIndex;
+        }
+      }
+    </script>
 
     <form id="newFormular" action="" method="POST" style="display: grid; grid-template-columns: 10% 10%; grid-gap: 30px">
 
@@ -143,6 +169,8 @@
 
 
       <button type="submit" form="modalForm" class="btn-default Indsend" title="save" id="submitindmelder">Indsend</button>
+
+      <button type="button" onclick="selectNextOption()" class="btn-default Next" title="select next">Næste</button>
     </form>
 
 
