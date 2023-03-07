@@ -52,6 +52,21 @@ span {
     color: var(--BYGST_lys);
 }
 
+span2{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 240px;
+    flex-direction: row;
+
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: var(--BYGST_blaa);
+    color: var(--BYGST_lys);
+
+}
+
 
 .sidsteMåned{
     display: flex;
@@ -68,11 +83,12 @@ span {
 .title-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 50px;
+  grid-column-gap: 15px;
   margin-left: 50px;
 
-
 }
+
+
 
 .input-container{
     display: flex;
