@@ -38,10 +38,45 @@ input[type="text"]{
 #dropdownDelLok{
     margin-bottom: 20px;
 }
+span {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+    flex-direction: row;
+
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: var(--BYGST_graa);
+    color: var(--BYGST_lys);
+}
+
+
+.sidsteMåned{
+    display: flex;
+}
+
+#row-container{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    flex-wrap: wrap;
+
+
+}
+.title-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  margin-left: 50px;
+
+
+}
 
 .input-container{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
 }
 .input-container label{
@@ -160,12 +195,8 @@ ul {
     overflow: hidden;
 }
 
-span {
-    position: absolute;
-    left: -9999px;
-    display: inline-block;
-    min-width: 6em;
-}
+
+
 
 #hold {
     height: 100%;
@@ -296,6 +327,23 @@ span {
 .btn-default a{
     color: var(--BYGST_lys);
 
+}
+
+
+.label-default{
+    padding: 8px;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: var(--BYGST_orange);
+    border: darkgoldenrod;
+    color: var(--BYGST_lys);
+    border-radius: 5px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 

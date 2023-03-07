@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Backoffice</title>
-  <script src="../../js/backoffice/holdBackoffice.js" defer></script>
+  <script src="../js/main.js" defer></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
   <link rel="stylesheet" href="../css/mock1.css">
@@ -22,9 +22,6 @@
           <li class="nav-item px-sm-3">
             <a class="nav-link" href="index.html">Forside</a>
           </li>
-          <li class="nav-item px-sm-3">
-            <a class="nav-link" href="omOs.html">Om os</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -41,17 +38,17 @@
   <div id="hold-container">
 
     <select id="dropdownFML" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
-      <option value="Option1">Option1</option>
-      <option value="Option2">Option2</option>
-      <option value="Option3">Option3</option>
-      <option value="Option4">Option4</option>
+      <option value="Option1">FML Navn</option>
+      <option value="Option2">FML Navn</option>
+      <option value="Option3">FML Navn</option>
+      <option value="Option4">FML Navn</option>
 
     </select>
     <select id="dropdownDelLok" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
-      <option value="Option1">Option1</option>
-      <option value="Option2">Option2</option>
-      <option value="Option3">Option3</option>
-      <option value="Option4">Option4</option>
+      <option value="Option1">Dellokalitet</option>
+      <option value="Option2">Dellokalitet</option>
+      <option value="Option3">Dellokalitet</option>
+      <option value="Option4">Dellokalitet</option>
 
     </select>
 
@@ -81,90 +78,165 @@
       }
     </script>
 
-    <form id="newFormular" action="" method="POST" style="display: grid; grid-template-columns: 10% 10%; grid-gap: 30px">
+    <form id="row-container" action="" method="GET">
+
+      <label id="test"> </label>
+
+      <div class="title-container" >
+        <label for="inputDropDown">Levering</label>
+        <label for="inputDropDown1">Patner</label>
+        <label for="sidste1">Sidste Månedes Indmeldinger</label>
+        <label for="sidste2">Sidste Månedes Indmeldinger</label>
+
+
+
+
+      </div>
+    </form>
+
+
+
+
+
+
+    <form id="newFormular" action="" method="POST" style="display: grid; grid-template-columns: 10% 25%; grid-gap: 20px">
 
       <label id="item-value1">Renhold</label>
-      <div class="input-container">
+        <div class="input-container">
 
-          <input type="text" name="item1" onblur="validateInput(this)">
-          <input type="text" name="item2" onblur="validateInput(this)">
+          <select id="inputDropDown" class="btn-default">
+            <option value="Ikke-tilfredsstillende leverance">Ikke-tilfredsstillende leverance</option>
+            <option value="Den rimelige leverance">Den rimelige leverance</option>
+            <option value="Tilfredsstillende leverance">Tilfredsstillende leverance</option>
+          </select>
 
-        <div class="text-content">
-          <span>data</span>
+          <select id="inputDropDown1" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+
+          </select>
+          <div id="sidste1" class="sidsteMåned">
+
+          </div>
         </div>
-      </div>
+
+
 
 
       <label id="item-value2">Kantine</label>
-      <div class="input-container">
+        <div class="input-container">
+          <select id="inputDropDown2" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <select id="inputDropDown3" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <div id="sidste2" class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
-
-        <div class="text-content">
-          <span>data</span>
+          </div>
         </div>
-      </div>
 
 
       <label id="item-value3">Intern Service</label>
-      <div class="input-container">
+        <div class="input-container">
+          <select id="inputDropDown4" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <select id="inputDropDown5" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <div class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
+          </div>
 
-        <div class="text-content">
-          <span>data</span>
         </div>
-      </div>
 
 
       <label id="item-value4">Udearealer</label>
-      <div class="input-container">
+       <div class="input-container">
+         <select id="inputDropDown6" class="btn-default">
+           <option value="Option1">Ikke-tilfredsstillende leverance</option>
+           <option value="Option2">Den rimelige leverance</option>
+           <option value="Option3">Tilfredsstillende leverance</option>
+         </select>
+         <select id="inputDropDown7" class="btn-default">
+           <option value="Option1">Ikke-tilfredsstillende leverance</option>
+           <option value="Option2">Den rimelige leverance</option>
+           <option value="Option3">Tilfredsstillende leverance</option>
+         </select>
+         <div class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
+         </div>
 
-        <div class="text-content">
-          <span>data</span>
-        </div>
-      </div>
+       </div>
 
 
       <label id="item-value5">Indvendig Vedligehold</label>
-      <div class="input-container">
+       <div class="input-container">
+         <select id="inputDropDown8" class="btn-default">
+           <option value="Option1">Ikke-tilfredsstillende leverance</option>
+           <option value="Option2">Den rimelige leverance</option>
+           <option value="Option3">Tilfredsstillende leverance</option>
+         </select>
+         <select id="inputDropDown9" class="btn-default">
+           <option value="Option1">Ikke-tilfredsstillende leverance</option>
+           <option value="Option2">Den rimelige leverance</option>
+           <option value="Option3">Tilfredsstillende leverance</option>
+         </select>
+         <div class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
+         </div>
 
-        <div class="text-content">
-          <span>data</span>
-        </div>
-      </div>
+
+       </div>
 
 
       <label id="item-value6">Affaldshåndtering</label>
-      <div class="input-container">
+        <div class="input-container">
+          <select id="inputDropDown10" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <select id="inputDropDown11" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <div class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
+          </div>
 
-        <div class="text-content">
-          <span>data</span>
         </div>
-      </div>
 
 
       <label id="item-value7">Vagt og Sikkerhed</label>
-      <div class="input-container">
+        <div class="input-container">
+          <select id="inputDropDown12" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <select id="inputDropDown13" class="btn-default">
+            <option value="Option1">Ikke-tilfredsstillende leverance</option>
+            <option value="Option2">Den rimelige leverance</option>
+            <option value="Option3">Tilfredsstillende leverance</option>
+          </select>
+          <div class="sidsteMåned">
 
-        <input type="text" name="item1" onblur="validateInput(this)">
-        <input type="text" name="item2" onblur="validateInput(this)">
+          </div>
 
-        <div class="text-content">
-          <span>data</span>
+
         </div>
-      </div>
 
 
 
