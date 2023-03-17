@@ -2,12 +2,12 @@
     for (let i = 0; i < sidsteMåneed.length; i++) {
         let inputs = [];
         for (let i = 1; i <= 2; i++) {
-            let span = document.createElement("span");
-            span.textContent = "Sidste Månedes Indmeldinger";
-            inputs.push(span);
+            let span1 = document.createElement("span1");
+            span1.textContent = "Sidste Månedes Indmeldinger";
+            inputs.push(span1);
         }
-        inputs.forEach(span => {
-            sidsteMåneed[i].appendChild(span);
+        inputs.forEach(span1 => {
+            sidsteMåneed[i].appendChild(span1);
         });
     }
 

@@ -38,18 +38,51 @@ input[type="text"]{
 #dropdownDelLok{
     margin-bottom: 20px;
 }
-span {
+
+
+
+.label-placement{
+    vertical-align: bottom;
+}
+
+
+span1 {
     display: inline-block;
-    border: 1px solid #ccc;
+
+    padding: 5px;
+    width: 300px;
+    flex-direction: row;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-width: 2px;
+    border: solid var(--BYGST_graa) ;
+
+
+
+    text-align: center;
+    background-color: var(--BYGST_lys);
+    color: var(--BYGST_graa);
+}
+
+span2{
+    display: inline-block;
+
     padding: 5px;
     width: 300px;
     flex-direction: row;
 
+    border-radius: 5px;
+
     margin-top: 20px;
-    margin-left: 15px;
+
+    border-color: var(--BYGST_graa);
+
     text-align: center;
-    background-color: var(--BYGST_graa);
-    color: var(--BYGST_lys);
+    background-color: var(--BYGST_lysgroen);
+    color: var(--BYGST_graa);
+
 }
 
 span2{
@@ -91,9 +124,11 @@ span2{
 
 
 .input-container{
+    width: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    grid-column-gap: 50px;
 }
 .input-container label{
     margin-left: 10px;
@@ -130,7 +165,7 @@ header{
 }
 
 .bg-brown {
-    background-color: var(--BYGST_blaa) !important;
+    background-color: var(--BYGST_lysblaa) !important;
 }
 
 /* OTHER GENERIC STUFF? */
@@ -285,51 +320,24 @@ ul {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.opret-hold-btn {
-    padding: 8px;
-    margin-top: 20px;
-    margin-left: 20px;
-    text-align: center;
-    background-color: darkgoldenrod;
-    border: darkgoldenrod;
-    color: white;
-    border-radius: 5px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    cursor: pointer;
 
-}
 
-.view-page-btn {
-    padding: 8px;
-    margin-top: 20px;
-    margin-left: 15px;
-    text-align: center;
-    background-color: var(--BYGST_orange);
-    border: darkgoldenrod;
-    color: var(--BYGST_lys);
-    border-radius: 5px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    cursor: pointer;
 
-}
+
 
 
 
 .btn-default {
+
     padding: 8px;
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 95px;
     text-align: center;
-    background-color: var(--BYGST_orange);
-    border: darkgoldenrod;
-    color: var(--BYGST_lys);
-    border-radius: 5px;
+    background-color: var(--BYGST_lys);
+    border: solid var(--BYGST_lysgroen);
+    color: var(--BYGST_graa);
+    border-width: 2px;
+    border-radius: 10px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -339,28 +347,45 @@ ul {
 
 }
 
-
-.btn-default a{
-    color: var(--BYGST_lys);
-
-}
-
-
-.label-default{
+.btn-default2{
     padding: 8px;
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 45px;
     text-align: center;
-    background-color: var(--BYGST_orange);
-    border: darkgoldenrod;
-    color: var(--BYGST_lys);
-    border-radius: 5px;
+    background-color: var(--BYGST_lys);
+    border: solid var(--BYGST_lysgroen);
+    color: var(--BYGST_graa);
+    border-width: 2px;
+    border-radius: 10px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer;
+
+
 }
+.btn-default-submit{
+    padding: 8px;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: var(--BYGST_orange);
+
+    color: var(--BYGST_lys);
+
+    border-radius: 10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+
+
+
+
 
 
 

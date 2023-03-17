@@ -25,6 +25,14 @@ body {
     background: var(--BYGST_lys);
 }
 
+.backoffec {
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+.backoffec input{
+    width: 175px;
+}
 
 .sidebar-wrapper {
     display: flex;
@@ -234,6 +242,7 @@ span {
 .btn-default :hover{
     color: var(--BYGST_graa);
 }
+
 
 
 
