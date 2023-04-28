@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Hold Backoffice</title>
-  <script src="../../js/main.js" defer></script>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/getDataFmlAndDel.js"></script>
+  <script src="../../js/dropdownUtils.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>-->
   <link rel="stylesheet" href="../../css/mock1.css">
@@ -28,46 +30,22 @@
 <section>
   <div id="hold-container">
 
-    <select id="dropdownFML" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
-      <option value="Option1">FML Navn</option>
-      <option value="Option2">FML Navn</option>
-      <option value="Option3">FML Navn</option>
-      <option value="Option4">FML Navn</option>
+      <select id="dropdownFML" class="btn-default" >
+        <option value=""> </option>
+
+
+      </select>
+
+
+
+
+    <select id="dropdownDelLok" class="btn-default" >
+      <option disabled selected value="">Vælg Dellokalitet</option>
+
 
     </select>
-    <select id="dropdownDelLok" class="btn-default" onchange="updateItemValue(); toggleInputFields();">
-      <option value="Option1">Dellokalitet1</option>
-      <option value="Option2">Dellokalitet2</option>
-      <option value="Option3">Dellokalitet3</option>
-      <option value="Option4">Dellokalitet4</option>
-
-    </select>
-
-    <script>
-      // fetch options from the database
-      fetch('/getOptions')
-              .then(response => response.json())
-              .then(options => {
-                // populate the dropdown with options
-                const dropdown = document.getElementById('dropdownDelLok');
-                options.forEach(option => {
-                  const optionElement = document.createElement('option');
-                  optionElement.value = option.name;
-                  optionElement.text = option.name;
-                  dropdown.appendChild(optionElement);
-                });
-              })
-              .catch(error => console.error(error));
 
 
-      function selectNextOption() {
-        var dropdown = document.getElementById("dropdownDelLok");
-        var nextIndex = dropdown.selectedIndex + 1;
-        if (nextIndex < dropdown.options.length) {
-          dropdown.selectedIndex = nextIndex;
-        }
-      }
-    </script>
 
     <form  action="" method="GET"
           style="display: grid; grid-template-columns: 10% 25%; grid-gap: 20px;" >
@@ -259,9 +237,9 @@
   </div>
   <button type="submit" form="modalForm" class="btn-default-submit Indsend" title="save" id="submitindmelder">Indsend</button>
 
-  <button type="button" onclick="selectPrevOption()" class="btn-default-submit prev" title="select prev">Forrige</button>
+  <button type="button" onclick="selectPrevOption(document.getElementById('dropdownDelLok'))" class="btn-default-submit prev" title="select prev">Forrige</button>
 
-  <button type="button" onclick="selectNextOption()" class="btn-default-submit Next" title="select next">Næste</button>
+  <button type="button" onclick="selectNextOption(document.getElementById('dropdownDelLok'))" class="btn-default-submit Next" title="select next">Næste</button>
 
 
 </section>
